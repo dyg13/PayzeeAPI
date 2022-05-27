@@ -1,0 +1,62 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32505.173
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{4FB2A041-EE02-45EB-AF46-DE8F1A4CC259}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PayzeeAPI.Domain", "Core\PayzeeAPI.Domain\PayzeeAPI.Domain.csproj", "{6D50998C-C3B0-4AB4-9CED-CFF4DCC997C2}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PayzeeAPI.Application", "Core\PayzeeAPI.Application\PayzeeAPI.Application.csproj", "{9C42C33E-1FA3-425A-B0A3-9F722CF0451D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infastructure", "Infastructure", "{CA77E684-CB35-4ABB-94CC-63CBBF6AE00D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PayzeeAPI.Infastructure", "Infastructure\PayzeeAPI.Infastructure\PayzeeAPI.Infastructure.csproj", "{ADA9C6C0-DED0-4E21-B97E-AE642517444D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PayzeeAPI.Persistence", "Infastructure\PayzeeAPI.Persistence\PayzeeAPI.Persistence.csproj", "{C715AE02-DB0C-4766-B6E5-4ECCF11219E1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{F3917E01-0D54-4449-8D4F-1C93BB51E7EF}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PayzeeAPI.Api", "Presentation\PayzeeAPI.Api\PayzeeAPI.Api.csproj", "{61D6E1F1-CDAC-4FDC-91A5-4A25171402FB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6D50998C-C3B0-4AB4-9CED-CFF4DCC997C2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6D50998C-C3B0-4AB4-9CED-CFF4DCC997C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6D50998C-C3B0-4AB4-9CED-CFF4DCC997C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6D50998C-C3B0-4AB4-9CED-CFF4DCC997C2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9C42C33E-1FA3-425A-B0A3-9F722CF0451D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9C42C33E-1FA3-425A-B0A3-9F722CF0451D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9C42C33E-1FA3-425A-B0A3-9F722CF0451D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9C42C33E-1FA3-425A-B0A3-9F722CF0451D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ADA9C6C0-DED0-4E21-B97E-AE642517444D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ADA9C6C0-DED0-4E21-B97E-AE642517444D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ADA9C6C0-DED0-4E21-B97E-AE642517444D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ADA9C6C0-DED0-4E21-B97E-AE642517444D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C715AE02-DB0C-4766-B6E5-4ECCF11219E1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C715AE02-DB0C-4766-B6E5-4ECCF11219E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C715AE02-DB0C-4766-B6E5-4ECCF11219E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C715AE02-DB0C-4766-B6E5-4ECCF11219E1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{61D6E1F1-CDAC-4FDC-91A5-4A25171402FB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{61D6E1F1-CDAC-4FDC-91A5-4A25171402FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{61D6E1F1-CDAC-4FDC-91A5-4A25171402FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{61D6E1F1-CDAC-4FDC-91A5-4A25171402FB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{6D50998C-C3B0-4AB4-9CED-CFF4DCC997C2} = {4FB2A041-EE02-45EB-AF46-DE8F1A4CC259}
+		{9C42C33E-1FA3-425A-B0A3-9F722CF0451D} = {4FB2A041-EE02-45EB-AF46-DE8F1A4CC259}
+		{ADA9C6C0-DED0-4E21-B97E-AE642517444D} = {CA77E684-CB35-4ABB-94CC-63CBBF6AE00D}
+		{C715AE02-DB0C-4766-B6E5-4ECCF11219E1} = {CA77E684-CB35-4ABB-94CC-63CBBF6AE00D}
+		{61D6E1F1-CDAC-4FDC-91A5-4A25171402FB} = {F3917E01-0D54-4449-8D4F-1C93BB51E7EF}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6468798B-9BFD-428D-B9D8-017013B197AE}
+	EndGlobalSection
+EndGlobal
