@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 using PayzeeAPI.Application.Repositories;
+using PayzeeAPI.Application.ViewModels.CustomerCreditCards;
 using PayzeeAPI.Application.ViewModels.Customers;
 using PayzeeAPI.Domain;
 using PayzeeAPI.Persistence.Helpers.ReturnHelpers;
@@ -28,13 +29,13 @@ namespace PayzeeAPI.Api.Controllers
         }
 
         [HttpPut("/DeleteCreditCard")]
-        public async Task<IActionResult> DeleteCreditCard(CustomerCreditCardCreateVM createCreditCardVM)
+        public async Task<IActionResult> DeleteCreditCard(CustomerCreditCardVM createCreditCardVM)
         {
             try
             {
 
             
-            var createCreditCard = _mapper.Map<CustomerCreditCardCreateVM, CustomerCreditCard>(createCreditCardVM);
+            var createCreditCard = _mapper.Map<CustomerCreditCardVM, CustomerCreditCard>(createCreditCardVM);
 
             var json = JsonConvert.SerializeObject(createCreditCard);
             var url = "https://ppgpayment-test.birlesikodeme.com:20000/api/ppg/Payment/DeleteCustomerCard";
@@ -44,7 +45,7 @@ namespace PayzeeAPI.Api.Controllers
             {
                 var response = await client.PutAsync(url, data);
 
-                if (((int)response.StatusCode) != StatusCodes.Status200OK)
+                if (((int)response.StatusCode) == StatusCodes.Status200OK)
                 {
                     var result = await response.Content.ReadAsStringAsync();
 
@@ -57,8 +58,8 @@ namespace PayzeeAPI.Api.Controllers
                         return BadRequest(new { message = deleteCreditCardReturn.message });
                 }
                 else
-                    return BadRequest();
-            }
+                        return StatusCode((int)response.StatusCode);
+                }
             }
             catch (Exception ex)
             {

@@ -28,7 +28,7 @@ namespace PayzeeAPI.Api.Controllers
         [HttpPost]
         public async Task<IActionResult> CreateCustomer(CustomerCreateVM customerVM)
         {
-            TcKimlikService.KPSPublicSoapClient client=null;
+           
 
             try
             {
@@ -40,7 +40,7 @@ namespace PayzeeAPI.Api.Controllers
 
                 if (result)
                 {
-                    using ( client = new(TcKimlikService.KPSPublicSoapClient.EndpointConfiguration.KPSPublicSoap))
+                    using (TcKimlikService.KPSPublicSoapClient client = new(TcKimlikService.KPSPublicSoapClient.EndpointConfiguration.KPSPublicSoap))
                     {
 
                         var response = await client.TCKimlikNoDogrulaAsync(customerVM.IdentityNo, customerVM.Name, customerVM.Surname, customerVM.BirthDate.Year);
@@ -64,8 +64,7 @@ namespace PayzeeAPI.Api.Controllers
             }
             finally
             {
-             if(client.State==System.ServiceModel.CommunicationState.Opened)
-                    client.Close(); 
+             
             }
         }
 

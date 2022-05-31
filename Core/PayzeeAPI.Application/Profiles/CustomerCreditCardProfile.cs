@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using PayzeeAPI.Application.ViewModels.CustomerCreditCards;
 using PayzeeAPI.Application.ViewModels.Customers;
 using PayzeeAPI.Domain;
 using System;
@@ -13,7 +14,7 @@ namespace PayzeeAPI.Application.Profiles
     {
         public CustomerCreditCardProfile()
         {
-            CreateMap<CustomerCreditCardCreateVM, CustomerCreditCard>().ReverseMap();
+            CreateMap<CustomerCreditCardVM, CustomerCreditCard>().ReverseMap();
 
         }
     }

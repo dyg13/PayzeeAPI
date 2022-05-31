@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PayzeeAPI.Application.ViewModels.Customers
+namespace PayzeeAPI.Application.ViewModels.CustomerCreditCards
 {
-    public class CustomerCreditCardCreateVM
+    public class CustomerCreditCardVM
     {
         public string CardToken { get; set; }
         public string CardNetwork { get; set; }
